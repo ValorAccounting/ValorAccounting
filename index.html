@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valor Accounting | Modern Accounting Solutions</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        :root {
+            --primary-blue: #0052cc;
+            --secondary-blue: #0077ff;
+            --light-blue: #e6f0ff;
+            --dark-blue: #003580;
+        }
+        
+        .bg-primary-blue {
+            background-color: var(--primary-blue);
+        }
+        
+        .bg-light-blue {
+            background-color: var(--light-blue);
+        }
+        
+        .text-primary-blue {
+            color: var(--primary-blue);
+        }
+        
+        .border-primary-blue {
+            border-color: var(--primary-blue);
+        }
+        
+        .hover-bg-secondary-blue:hover {
+            background-color: var(--secondary-blue);
+        }
+        
+        .gradient-blue {
+            background: linear-gradient(90deg, var(--primary-blue) 0%, var(--secondary-blue) 100%);
+        }
+        
+        .shadow-blue {
+            box-shadow: 0 4px 14px 0 rgba(0, 82, 204, 0.2);
+        }
+        
+        .hero-pattern {
+            background-color: white;
+            background-image: radial-gradient(var(--light-blue) 2px, transparent 2px);
+            background-size: 30px 30px;
+        }
+        
+        .transition-all {
+            transition: all 0.3s ease;
+        }
+        
+        .chat-container {
+            height: 300px;
+            overflow-y: auto;
+        }
+        
+        .chat-message {
+            max-width: 80%;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased text-gray-800">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md py-4 sticky top-0 z-50">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <span class="text-2xl font-bold text-primary-blue">VALOR</span>
+                <span class="text-2xl font-light ml-1">ACCOUNTING</span>
+            </div>
+            
+            <div class="hidden md:flex space-x-8 items-center">
+                <a href="#services" class="hover:text-primary-blue transition-all">Services</a>
+                <a href="#ai-tool" class="hover:text-primary-blue transition-all">AccountingGPT</a>
+                <a href="#pricing" class="hover:text-primary-blue transition-all">Pricing</a>
+                <a href="#about" class="hover:text-primary-blue transition-all">About</a>
+                <a href="#contact" class="bg-primary-blue hover-bg-secondary-blue text-white py-2 px-6 rounded-full transition-all">Contact Us</a>
+            </div>
+            
+            <div class="md:hidden">
+                <button class="text-gray-600">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-pattern py-16 md:py-24">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 md:pr-12 mb-8 md:mb-0">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">Modern Accounting for <span class="text-primary-blue">Perth's Small Businesses</span></h1>
+                <p class="text-lg text-gray-600 mb-8">Streamline your finances with our expert accounting services and AI-powered solutions designed specifically for small businesses and sole traders.</p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#pricing" class="bg-primary-blue hover-bg-secondary-blue text-white font-medium py-3 px-8 rounded-full shadow-blue text-center transition-all">View Pricing</a>
+                    <a href="#ai-tool" class="border-2 border-primary-blue text-primary-blue font-medium py-3 px-8 rounded-full hover:bg-light-blue text-center transition-all">Try AccountingGPT</a>
+                </div>
+            </div>
+            <div class="md:w-1/2">
+                <img src="/api/placeholder/600/400" alt="Accounting Dashboard" class="rounded-lg shadow-xl">
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">Modern Accounting Solutions</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Why traditional accounting services no longer meet the needs of today's small businesses.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-xl shadow-blue hover:shadow-lg transition-all">
+                    <div class="w-14 h-14 bg-light-blue rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-laptop-code text-2xl text-primary-blue"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Online & Accessible</h3>
+                    <p class="text-gray-600">Access your accounting services anytime, anywhere. No more scheduling in-person meetings.</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-xl shadow-blue hover:shadow-lg transition-all">
+                    <div class="w-14 h-14 bg-light-blue rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-robot text-2xl text-primary-blue"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">AI-Powered</h3>
+                    <p class="text-gray-600">Our AccountingGPT tool provides instant answers to your accounting questions 24/7.</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-xl shadow-blue hover:shadow-lg transition-all">
+                    <div class="w-14 h-14 bg-light-blue rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-dollar-sign text-2xl text-primary-blue"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Affordable Pricing</h3>
+                    <p class="text-gray-600">Transparent monthly pricing with no hidden fees. Perfect for small businesses.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">Our Services</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Comprehensive accounting solutions tailored for Perth's small businesses and sole traders.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-all">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-light-blue rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-calculator text-xl text-primary-blue"></i>
+                        </div>
+                        <h3 class="text-xl font-bold">Monthly Bookkeeping</h3>
+                    </div>
+                    <p class="text-gray-600 mb-6">Stay on top of your finances with our comprehensive monthly bookkeeping service. We'll reconcile your accounts, categorize transactions, and provide you with clear financial reports.</p>
+                    <ul class="space-y-3 mb-6">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                            <span>Bank and credit card reconciliation</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                            <span>Monthly financial statements</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                            <span>GST tracking and reporting</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-all">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-light-blue rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-file-invoice-dollar text-xl text-primary-blue"></i>
+                        </div>
+                        <h3 class="text-xl font-bold">Tax Preparation</h3>
+                    </div>
+                    <p class="text-gray-600 mb-6">Maximize your deductions and ensure compliance with our expert tax preparation services. We handle both business and individual tax returns.</p>
+                    <ul class="space-y-3 mb-6">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                            <span>Business tax returns</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                            <span>BAS preparation and lodgment</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                            <span>Personal tax returns for business owners</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-all">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-light-blue rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-chart-line text-xl text-primary-blue"></i>
+                        </div>
+                        <h3 class="text-xl font-bold">Financial Advisory</h3>
+                    </div>
+                    <p class="text-gray-600 mb-6">Transform your financial data into actionable insights with our advisory services. We help you understand your numbers and make informed decisions.</p>
+                    <ul class="space-y-3 mb-6">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                            <span>Cash flow forecasting</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                            <span>Profit improvement strategies</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                            <span>Quarterly business reviews</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-all">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-light-blue rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-brain text-xl text-primary-blue"></i>
+                        </div>
+                        <h3 class="text-xl font-bold">AccountingGPT Access</h3>
+                    </div>
+                    <p class="text-gray-600 mb-6">Get instant answers to your accounting and tax questions with our AI-powered AccountingGPT. Available 24/7 for all our clients.</p>
+                    <ul class="space-y-3 mb-6">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                            <span>Unlimited AI accounting assistance</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                            <span>Australian tax-specific knowledge</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                            <span>Save and export conversations</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Tool Section -->
+    <section id="ai-tool" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">Meet AccountingGPT</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Our AI-powered accounting assistant provides instant answers to your accounting and tax questions 24/7.</p>
+            </div>
+            
+            <div class="flex flex-col md:flex-row items-center gap-8">
+                <div class="md:w-1/2 order-2 md:order-1">
+                    <div class="bg-white rounded-xl shadow-xl overflow-hidden border border-gray-200">
+                        <div class="bg-primary-blue text-white p-4">
+                            <h3 class="font-bold">AccountingGPT</h3>
+                        </div>
+                        <div class="chat-container p-4 bg-gray-50">
+                            <div class="flex justify-start mb-4">
+                                <div class="bg-white chat-message rounded-lg p-3 shadow">
+                                    <p class="text-sm"><strong>AccountingGPT:</strong> Hi there! I'm your AI accounting assistant. How can I help you today?</p>
+                                </div>
+                            </div>
+                            <div class="flex justify-end mb-4">
+                                <div class="bg-primary-blue chat-message rounded-lg p-3 shadow text-white">
+                                    <p class="text-sm">Can I claim my home office as a tax deduction?</p>
+                                </div>
+                            </div>
+                            <div class="flex justify-start mb-4">
+                                <div class="bg-white chat-message rounded-lg p-3 shadow">
+                                    <p class="text-sm"><strong>AccountingGPT:</strong> Yes, if you work from home, you can claim a deduction for home office expenses. There are three methods available in Australia:</p>
+                                    <p class="text-sm mt-2">1. Fixed rate method (52 cents per hour)</p>
+                                    <p class="text-sm">2. Actual cost method (calculate specific expenses)</p>
+                                    <p class="text-sm">3. Shortcut method (80 cents per hour - temporary COVID measure)</p>
+                                    <p class="text-sm mt-2">Would you like me to explain which method would be best for your situation?</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-4 border-t border-gray-200">
+                            <div class="flex">
+                                <input type="text" placeholder="Ask a question..." class="flex-1 p-2 border border-gray-300 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-primary-blue">
+                                <button class="bg-primary-blue text-white p-2 rounded-r-lg">
+                                    <i class="fas fa-paper-plane"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2 order-1 md:order-2">
+                    <h3 class="text-2xl font-bold mb-6">How AccountingGPT Helps You</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 mt-1">
+                                <div class="w-10 h-10 bg-light-blue rounded-full flex items-center justify-center">
+                                    <i class="fas fa-clock text-primary-blue"></i>
+                                </div>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-lg font-semibold">24/7 Availability</h4>
+                                <p class="text-gray-600">Get answers to your accounting questions anytime, even outside business hours.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 mt-1">
+                                <div class="w-10 h-10 bg-light-blue rounded-full flex items-center justify-center">
+                                    <i class="fas fa-file-invoice text-primary-blue"></i>
+                                </div>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-lg font-semibold">Australian Tax Knowledge</h4>
+                                <p class="text-gray-600">Specifically trained on Australian tax laws and regulations relevant to small businesses.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 mt-1">
+                                <div class="w-10 h-10 bg-light-blue rounded-full flex items-center justify-center">
+                                    <i class="fas fa-search-dollar text-primary-blue"></i>
+                                </div>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-lg font-semibold">Find Deductions</h4>
+                                <p class="text-gray-600">Discover tax deductions specific to your business that you might have missed.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 mt-1">
+                                <div class="w-10 h-10 bg-light-blue rounded-full flex items-center justify-center">
+                                    <i class="fas fa-user-tie text-primary-blue"></i>
+                                </div>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-lg font-semibold">Human Backup</h4>
+                                <p class="text-gray-600">Complex questions are escalated to our human accountants for personalized assistance.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">Simple, Transparent Pricing</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Affordable accounting solutions designed for Perth's small businesses and sole traders.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <!-- Starter Plan -->
+                <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition-all overflow-hidden">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Starter</h3>
+                        <p class="text-gray-600 mb-6">Essential services for sole traders</p>
+                        <div class="mb-6">
+                            <span class="text-4xl font-bold text-primary-blue">$129</span>
+                            <span class="text-gray-600">/month</span>
+                        </div>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                                <span>Monthly bookkeeping</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                                <span>BAS preparation & lodgment</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                                <span>Annual tax return</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                                <span>Basic AccountingGPT access</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                                <span>Email support</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="px-6 pb-6">
+                        <a href="#contact" class="block text-center bg-white border-2 border-primary-blue text-primary-blue font-medium py-2 px-4 rounded-lg hover:bg-light-blue transition-all">Get Started</a>
+                    </div>
+                </div>
+                
+                <!-- Standard Plan -->
+                <div class="bg-white rounded-xl shadow-xl transform md:scale-105 overflow-hidden">
+                    <div class="bg-primary-blue text-white py-2 text-center text-sm font-medium">
+                        MOST POPULAR
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Small Business</h3>
+                        <p class="text-gray-600 mb-6">Complete solution for small businesses</p>
+                        <div class="mb-6">
+                            <span class="text-4xl font-bold text-primary-blue">$249</span>
+                            <span class="text-gray-600">/month</span>
+                        </div>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                                <span>Everything in Starter</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                                <span>Monthly financial reports</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                                <span>Quarterly review meeting</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                                <span>Unlimited AccountingGPT access</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                                <span>Phone & email support</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="px-6 pb-6">
+                        <a href="#contact" class="block text-center bg-primary-blue hover-bg-secondary-blue text-white font-medium py-2 px-4 rounded-lg shadow-blue transition-all">Get Started</a>
+                    </div>
+                </div>
+                
+                <!-- Growth Plan -->
+                <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition-all overflow-hidden">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Growth</h3>
+                        <p class="text-gray-600 mb-6">Advanced services for growing businesses</p>
+                        <div class="mb-6">
+                            <span class="text-4xl font-bold text-primary-blue">$399</span>
+                            <span class="text-gray-600">/month</span>
+                        </div>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                                <span>Everything in Small Business</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                                <span>Payroll for up to 5 employees</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                                <span>Monthly advisory meetings</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                                <span>Cash flow forecasting</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                                <span>Priority support</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="px-6 pb-6">
+                        <a href="#contact" class="block text-center bg-white border-2 border-primary-blue text-primary-blue font-medium py-2 px-4 rounded-lg hover:bg-light-blue transition-all">Get Started</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- For Accounting Firms -->
+            <div class="mt-16 max-w-3xl mx-auto bg-white p-8 rounded-xl shadow-xl border border-primary-blue">
+                <div class="text-center mb-8">
+                    <h3 class="text-2xl font-bold mb-2">For Accounting Firms</h3>
+                    <p class="text-gray-600">Enhance your practice with our AI-powered accounting assistant</p>
+                </div>
+                
+                <div class="flex flex-col md:flex-row items-center justify-between gap-8">
+                    <div class="md:w-3/5">
+                        <h4 class="text-xl font-bold mb-4">AccountingGPT for Firms</h4>
+                        <ul class="space-y-3 mb-6">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                                <span>Unlimited access for your entire firm</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                                <span>Save staff time on routine questions</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                                <span>Australian tax and accounting knowledge</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                                <span>Admin portal with usage analytics</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="md:w-2/5 text-center">
+                        <div class="mb-4">
+                            <span class="text-4xl font-bold text-primary-blue">$99</span>
+                            <span class="text-gray-600">/month</span>
+                        </div>
+                        <p class="text-gray-600 mb-6">Per firm, unlimited users</p>
+                        <a href="#contact" class="inline-block bg-primary-blue hover-bg-secondary-blue text-white font-medium py-3 px-8 rounded-full shadow-blue transition-all">Schedule Demo</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+<section class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl font-bold mb-4">What Our Clients Say</h2>
+            <p class="text-gray-600 max-w-2xl mx-auto">Don't just take our word for it - here's what businesses have to say about Valor Accounting.</p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- First testimonial (David Wilson) -->
+            <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all">
+                <div class="mb-4">
+                    <div class="flex items-center mb-4">
+                        <div class="text-amber-400 flex">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <span class="ml-2 text-gray-600 text-sm">4.5</span>
+                    </div>
+                    <p class="text-gray-600 italic mb-4">"Their modern approach to accounting is refreshing. The AccountingGPT tool has saved me countless hours answering basic questions from my team."</p>
+                    <div class="flex items-center">
+                        <img src="/api/placeholder/50/50" alt="Client" class="rounded-full mr-3">
+                        <div>
+                            <p class="font-medium">David Wilson</p>
+                            <p class="text-sm text-gray-500">Cafe Owner, Subiaco</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Second testimonial (Sarah Johnson) -->
+            <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all">
+                <div class="mb-4">
+                    <div class="flex items-center mb-4">
+                        <div class="text-amber-400 flex">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="ml-2 text-gray-600 text-sm">5.0</span>
+                    </div>
+                    <p class="text-gray-600 italic mb-4">"Valor Accounting has transformed how I manage my business finances. Their online platform and AI tool make everything so much easier."</p>
+                    <div class="flex items-center">
+                        <img src="/api/placeholder/50/50" alt="Client" class="rounded-full mr-3">
+                        <div>
+                            <p class="font-medium">Sarah Johnson</p>
+                            <p class="text-sm text-gray-500">Boutique Owner, Perth</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Third testimonial (Michael Thompson) -->
+            <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all">
+                <div class="mb-4">
+                    <div class="flex items-center mb-4">
+                        <div class="text-amber-400 flex">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="ml-2 text-gray-600 text-sm">5.0</span>
+                    </div>
+                    <p class="text-gray-600 italic mb-4">"As a sole trader, I was overwhelmed by tax requirements. Valor's AccountingGPT answers my questions instantly, and their team handles everything else."</p>
+                    <div class="flex items-center">
+                        <img src="/api/placeholder/50/50" alt="Client" class="rounded-full mr-3">
+                        <div>
+                            <p class="font-medium">Michael Thompson</p>
+                            <p class="text-sm text-gray-500">Electrician, Fremantle</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2">
+                    <img src="/api/placeholder/500/500" alt="Founder" class="rounded-xl shadow-xl">
+                </div>
+                
+                <div class="md:w-1/2">
+                    <h2 class="text-3xl font-bold mb-6">About Valor Accounting</h2>
+                    <p class="text-gray-600 mb-6">Valor Accounting was founded with a simple mission: to make professional accounting services accessible and affordable for Perth's small businesses and sole traders.</p>
+                    <p class="text-gray-600 mb-6">Unlike traditional accounting firms, we leverage technology and AI to provide more efficient service without sacrificing quality. Our unique combination of human expertise and cutting-edge AI tools ensures you get the best of both worlds.</p>
+                    <p class="text-gray-600 mb-8">We understand the challenges that small businesses face, and we're committed to providing solutions that help you save time, maximize tax benefits, and make informed financial decisions.</p>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#contact" class="bg-primary-blue hover-bg-secondary-blue text-white font-medium py-3 px-8 rounded-full shadow-blue text-center transition-all">Contact Us</a>
+                        <a href="https://www.linkedin.com/company/valor-accounting" target="_blank" class="border-2 border-primary-blue text-primary-blue font-medium py-3 px-8 rounded-full hover:bg-light-blue text-center transition-all">
+                            <i class="fab fa-linkedin mr-2"></i> Connect on LinkedIn
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 gradient-blue text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-6">Ready to modernize your accounting?</h2>
+            <p class="text-white text-lg max-w-2xl mx-auto mb-8">Join Perth's forward-thinking small businesses who are already benefiting from our modern accounting solutions.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#contact" class="bg-white text-primary-blue font-medium py-3 px-8 rounded-full shadow-lg hover:bg-gray-100 transition-all">Get Started</a>
+                <a href="#pricing" class="border-2 border-white text-white font-medium py-3 px-8 rounded-full hover:bg-white hover:text-primary-blue transition-all">View Pricing</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">Contact Us</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Have questions about our services? Reach out and we'll get back to you promptly.</p>
+            </div>
+            
+            <div class="flex flex-col md:flex-row gap-8 max-w-5xl mx-auto">
+                <div class="md:w-1/2">
+                    <form class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Your Name</label>
+                            <input type="text" id="name" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-blue">
+                        </div>
+                        
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
+                            <input type="email" id="email" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-blue">
+                        </div>
+                        
+                        <div>
+                            <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
+                            <input type="tel" id="phone" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-blue">
+                        </div>
+                        
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Your Message</label>
+                            <textarea id="message" rows="4" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-blue"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="bg-primary-blue hover-bg-secondary-blue text-white font-medium py-3 px-8 rounded-lg shadow-blue transition-all w-full">Send Message</button>
+                    </form>
+                </div>
+                
+                <div class="md:w-1/2 bg-gray-50 p-8 rounded-xl">
+                    <h3 class="text-xl font-bold mb-6">Connect With Us</h3>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 mt-1">
+                                <div class="w-10 h-10 bg-light-blue rounded-full flex items-center justify-center">
+                                    <i class="fas fa-envelope text-primary-blue"></i>
+                                </div>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-lg font-semibold">Email</h4>
+                                <p class="text-gray-600">info@valoraccounting.com.au</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 mt-1">
+                                <div class="w-10 h-10 bg-light-blue rounded-full flex items-center justify-center">
+                                    <i class="fas fa-phone text-primary-blue"></i>
+                                </div>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-lg font-semibold">Phone</h4>
+                                <p class="text-gray-600">(08) 6123 4567</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 mt-1">
+                                <div class="w-10 h-10 bg-light-blue rounded-full flex items-center justify-center">
+                                    <i class="fas fa-map-marker-alt text-primary-blue"></i>
+                                </div>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-lg font-semibold">Location</h4>
+                                <p class="text-gray-600">Perth, Western Australia<br>Online services available Australia-wide</p>
+                            </div>
+                        </div>
+                        
+                        <div class="pt-4">
+                            <h4 class="text-lg font-semibold mb-4">Follow Us</h4>
+                            <div class="flex space-x-4">
+                                <a href="#" class="w-10 h-10 bg-light-blue rounded-full flex items-center justify-center hover:bg-primary-blue hover:text-white transition-all">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 bg-light-blue rounded-full flex items-center justify-center hover:bg-primary-blue hover:text-white transition-all">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 bg-light-blue rounded-full flex items-center justify-center hover:bg-primary-blue hover:text-white transition-all">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <span class="text-2xl font-bold text-white">VALOR</span>
+                        <span class="text-2xl font-light ml-1 text-blue-300">ACCOUNTING</span>
+                    </div>
+                    <p class="text-gray-400 mb-4">Modern accounting solutions for Perth's small businesses and sole traders.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-all">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-all">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-all">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#services" class="text-gray-400 hover:text-white transition-all">Monthly Bookkeeping</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white transition-all">Tax Preparation</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white transition-all">Financial Advisory</a></li>
+                        <li><a href="#ai-tool" class="text-gray-400 hover:text-white transition-all">AccountingGPT</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Company</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition-all">About Us</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition-all">Contact</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-all">Privacy Policy</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-all">Terms of Service</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Contact</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-2 text-blue-300"></i>
+                            <span class="text-gray-400">info@valoraccounting.com.au</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone mr-2 text-blue-300"></i>
+                            <span class="text-gray-400">(08) 6123 4567</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-map-marker-alt mr-2 text-blue-300"></i>
+                            <span class="text-gray-400">Perth, WA</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 Valor Accounting. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple scroll to section functionality
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
